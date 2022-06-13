@@ -56,15 +56,39 @@
 		5A89F14428574E25006C50B2 /* HackU07-ios */ = {
 			isa = PBXGroup;
 			children = (
-				5A89F14528574E25006C50B2 /* AppDelegate.swift */,
-				5A89F14728574E25006C50B2 /* SceneDelegate.swift */,
-				5A89F14928574E25006C50B2 /* ViewController.swift */,
-				5A89F14B28574E25006C50B2 /* Main.storyboard */,
-				5A89F14E28574E28006C50B2 /* Assets.xcassets */,
+				5A89F1592857507A006C50B2 /* App */,
+				5A89F15A2857508A006C50B2 /* Screen */,
+				5A89F15B285750B9006C50B2 /* Resources */,
 				5A89F15028574E28006C50B2 /* LaunchScreen.storyboard */,
 				5A89F15328574E28006C50B2 /* Info.plist */,
 			);
 			path = "HackU07-ios";
+			sourceTree = "<group>";
+		};
+		5A89F1592857507A006C50B2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5A89F14728574E25006C50B2 /* SceneDelegate.swift */,
+				5A89F14528574E25006C50B2 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5A89F15A2857508A006C50B2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5A89F14B28574E25006C50B2 /* Main.storyboard */,
+				5A89F14928574E25006C50B2 /* ViewController.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5A89F15B285750B9006C50B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A89F14E28574E28006C50B2 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
