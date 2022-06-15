@@ -133,4 +133,8 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+# Swift Format
+BuildTools/.build
+BuildTools/.swiftpm
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,swift,xcode
