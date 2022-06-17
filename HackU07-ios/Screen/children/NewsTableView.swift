@@ -7,38 +7,41 @@
 
 import UIKit
 
-
 class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     let screenHeight: CGFloat = UIScreen.main.bounds.height
     let data = mockData().data
-    
 
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "news") as! NewsCellView
-        cell.setCell(title: data[indexPath.row]["title"] as? String ?? "not found" , percentage: data[indexPath.row]["percentage"] as? CGFloat ??  0.0 )
+        cell.setCell(title: data[indexPath.row]["title"] as? String ?? "not found", percentage: data[indexPath.row]["percentage"] as? CGFloat ?? 0.0)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        data.count
     }
-    
+
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+
     required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-        }
-    
-    
+        super.init(coder: aDecoder)
+    }
+
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        self.delegate = self
-        self.dataSource = self
-        self.backgroundColor = .clear
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.addConstraints([
-            self.heightAnchor.constraint(equalToConstant: screenHeight * 0.7),
-            self.widthAnchor.constraint(equalToConstant: screenWidth)
+        backgroundColor = .clear
+        rowHeight = UITableView.automaticDimension
+        estimatedRowHeight = UITableView.automaticDimension
+        delegate = self
+        dataSource = self
+        backgroundColor = .clear
+        translatesAutoresizingMaskIntoConstraints = false
+        addConstraints([
+            heightAnchor.constraint(equalToConstant: screenHeight * 0.7),
+            widthAnchor.constraint(equalToConstant: screenWidth)
         ])
     }
 }

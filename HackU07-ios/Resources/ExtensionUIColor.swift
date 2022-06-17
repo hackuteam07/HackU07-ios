@@ -8,24 +8,23 @@
 import UIKit
 
 extension UIColor {
-    
     class var baseBlack: UIColor {
-        return UIColor(named: "baseBlack") ?? .black
+        UIColor(named: "baseBlack") ?? .black
     }
-    
+
     class var borderGray: UIColor {
-        return UIColor(named: "borderColor") ?? .gray
+        UIColor(named: "borderColor") ?? .gray
     }
-    
+
     class var highlightWhite: UIColor {
-        return UIColor(named: "highlightWhite") ?? .white
+        UIColor(named: "highlightWhite") ?? .white
     }
-    
+
     class var progressBackColor: UIColor {
-        return UIColor(named: "progressBackColor") ?? .clear
+        UIColor(named: "progressBackColor") ?? .clear
     }
-    
+
     class var progressGreen: UIColor {
-        return UIColor(named: "progressGreen") ?? .systemGreen
+        UIColor(named: "progressGreen") ?? .systemGreen
     }
 }

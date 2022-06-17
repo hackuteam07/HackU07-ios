@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0276A634D5FDAB2F80935B5E /* Pods_HackU07_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B446A4CF5B650B917CD2DE4 /* Pods_HackU07_ios.framework */; };
 		5A89F14628574E25006C50B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14528574E25006C50B2 /* AppDelegate.swift */; };
 		5A89F14828574E25006C50B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14728574E25006C50B2 /* SceneDelegate.swift */; };
 		5A89F14A28574E25006C50B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14928574E25006C50B2 /* ViewController.swift */; };
@@ -17,6 +16,7 @@
 		D6392ECC2859836B00988742 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECB2859836B00988742 /* MockData.swift */; };
 		D6392ED1285983F300988742 /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECF285983F200988742 /* NewsCellView.swift */; };
 		D6392ED2285983F300988742 /* NewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ED0285983F300988742 /* NewsTableView.swift */; };
+		D69244B9285CD3570099AEDB /* ALProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = D69244B8285CD3570099AEDB /* ALProgressView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +26,6 @@
 		5A89F14928574E25006C50B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A89F14E28574E28006C50B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A89F15328574E28006C50B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6907F08785FF3460FF1AC73C /* Pods-HackU07-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackU07-ios.debug.xcconfig"; path = "Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		9B446A4CF5B650B917CD2DE4 /* Pods_HackU07_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackU07_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CEF63194E27617C33C89006 /* Pods-HackU07-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackU07-ios.release.xcconfig"; path = "Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios.release.xcconfig"; sourceTree = "<group>"; };
 		D6392EC72859835800988742 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/Colors.xcassets"; sourceTree = "<group>"; };
 		D6392EC92859836500988742 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUIColor.swift; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/ExtensionUIColor.swift"; sourceTree = "<group>"; };
 		D6392ECB2859836B00988742 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/MockData.swift"; sourceTree = "<group>"; };
@@ -41,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0276A634D5FDAB2F80935B5E /* Pods_HackU07_ios.framework in Frameworks */,
+				D69244B9285CD3570099AEDB /* ALProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +51,6 @@
 				5A89F14428574E25006C50B2 /* HackU07-ios */,
 				5A89F14328574E25006C50B2 /* Products */,
 				BECE4288B1CCC90465E63C90 /* Pods */,
-				A83AFE8AD5F7964CB7F331F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,19 +103,9 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A83AFE8AD5F7964CB7F331F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9B446A4CF5B650B917CD2DE4 /* Pods_HackU07_ios.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BECE4288B1CCC90465E63C90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6907F08785FF3460FF1AC73C /* Pods-HackU07-ios.debug.xcconfig */,
-				9CEF63194E27617C33C89006 /* Pods-HackU07-ios.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -131,18 +117,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A89F15628574E28006C50B2 /* Build configuration list for PBXNativeTarget "HackU07-ios" */;
 			buildPhases = (
-				EDC93B82844ECADA2BB4BBC8 /* [CP] Check Pods Manifest.lock */,
 				5A0457482859759800138F54 /* Swift Format */,
 				5A89F13E28574E25006C50B2 /* Sources */,
 				5A89F13F28574E25006C50B2 /* Frameworks */,
 				5A89F14028574E25006C50B2 /* Resources */,
-				6F4380D9DE80E00E719058D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "HackU07-ios";
+			packageProductDependencies = (
+				D69244B8285CD3570099AEDB /* ALProgressView */,
+			);
 			productName = "HackU07-ios";
 			productReference = 5A89F14228574E25006C50B2 /* HackU07-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 5A89F13928574E25006C50B2;
+			packageReferences = (
+				D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */,
+			);
 			productRefGroup = 5A89F14328574E25006C50B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,45 +200,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd BuildTools\nSDKROOT=(xcurn --sdk macosx --show-sdk-path)\nswift run -c release swiftformat \"$SRCROOT\" --disable strongOutlets, trailingCommas\n";
-		};
-		6F4380D9DE80E00E719058D3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDC93B82844ECADA2BB4BBC8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HackU07-ios-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -386,7 +337,6 @@
 		};
 		5A89F15728574E28006C50B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6907F08785FF3460FF1AC73C /* Pods-HackU07-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,9 +347,9 @@
 				INFOPLIST_FILE = "HackU07-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,7 +365,6 @@
 		};
 		5A89F15828574E28006C50B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CEF63194E27617C33C89006 /* Pods-HackU07-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,9 +375,9 @@
 				INFOPLIST_FILE = "HackU07-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alxrguz/ALProgressView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D69244B8285CD3570099AEDB /* ALProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */;
+			productName = ALProgressView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A89F13A28574E25006C50B2 /* Project object */;
 }

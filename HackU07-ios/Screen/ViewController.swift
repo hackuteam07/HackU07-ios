@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .baseBlack
-        self.view.addSubview(newsTableView)
+        view.backgroundColor = .baseBlack
+        view.addSubview(newsTableView)
         newsTableView.register(NewsCellView.self, forCellReuseIdentifier: "news")
-        
-        newsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+
+        newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
