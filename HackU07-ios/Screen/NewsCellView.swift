@@ -9,13 +9,13 @@ import ALProgressView
 import UIKit
 
 class NewsCellView: UITableViewCell {
-    let deviceWidth = UIScreen.main.bounds.size.width
+//    let deviceWidth = UIScreen.main.bounds.size.width
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: self.deviceWidth * 0.05)
+        label.font = UIFont.systemFont(ofSize: .titleTextSize)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -24,7 +24,7 @@ class NewsCellView: UITableViewCell {
     lazy var percentLabel: UILabel = {
         let label = UILabel()
         label.textColor = .progressGreen
-        label.font = UIFont.systemFont(ofSize: self.deviceWidth * 0.03)
+        label.font = UIFont.systemFont(ofSize: .percentageTextSize)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -51,25 +51,25 @@ class NewsCellView: UITableViewCell {
         contentView.addSubview(progressCircle)
         contentView.addSubview(percentLabel)
         contentView.addSubview(buttomBorder)
-        let paddingSize = deviceWidth * 0.05
+//        let paddingSize = deviceWidth * 0.05
         contentView.autoresizingMask = .flexibleHeight
-        let contentHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: deviceWidth * 0.25)
+        let contentHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: .deviceWidth * 0.25)
         contentHeightConstraint.priority = UILayoutPriority(rawValue: 750)
         contentView.addConstraints([
-            titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: paddingSize),
+            titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: .paddingSize),
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            titleLabel.widthAnchor.constraint(equalToConstant: deviceWidth * 0.6),
-            progressCircle.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -paddingSize),
+            titleLabel.widthAnchor.constraint(equalToConstant: .deviceWidth * 0.6),
+            progressCircle.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: .paddingSize * -1),
             progressCircle.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            progressCircle.widthAnchor.constraint(equalToConstant: deviceWidth * 0.2),
-            progressCircle.heightAnchor.constraint(equalToConstant: deviceWidth * 0.2),
+            progressCircle.widthAnchor.constraint(equalToConstant: .deviceWidth * 0.2),
+            progressCircle.heightAnchor.constraint(equalToConstant: .deviceWidth * 0.2),
             percentLabel.centerYAnchor.constraint(equalTo: progressCircle.centerYAnchor),
             percentLabel.centerXAnchor.constraint(equalTo: progressCircle.centerXAnchor),
             buttomBorder.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             buttomBorder.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             buttomBorder.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            buttomBorder.heightAnchor.constraint(equalToConstant: deviceWidth * 0.001),
+            buttomBorder.heightAnchor.constraint(equalToConstant: .tableSeparatorWidth),
             contentHeightConstraint
 
         ])

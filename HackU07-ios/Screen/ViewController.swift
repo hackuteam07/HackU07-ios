@@ -6,24 +6,35 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, IndicatorInfoProvider {
+    var tabInfo: IndicatorInfo = "Yahoo!ニュース"
     lazy var newsTableView = NewsTableView()
+    lazy var sortIcon: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "SortIcon"))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.addSubview(sortIcon)
         view.backgroundColor = .baseBlack
         view.addSubview(newsTableView)
         newsTableView.register(NewsCellView.self, forCellReuseIdentifier: "news")
 
+        view.addConstraints([
+            newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            sortIcon.rightAnchor.constraint(equalTo: view.rightAnchor, constant: UIScreen.main.bounds.width * -0.05),
+            sortIcon.bottomAnchor.constraint(equalTo: newsTableView.topAnchor)
+        ])
+
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
-    override func viewWillAppear(_: Bool) {
-        navigationController?.isNavigationBarHidden = true
-    }
-
-    override func viewDidDisappear(_: Bool) {
-        navigationController?.isNavigationBarHidden = false
+    func indicatorInfo(for _: PagerTabStripViewController) -> IndicatorInfo {
+        tabInfo
     }
 }

@@ -41,8 +41,8 @@ class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
         addConstraints([
-            heightAnchor.constraint(equalToConstant: screenHeight * 0.8),
-            widthAnchor.constraint(equalToConstant: screenWidth)
+            heightAnchor.constraint(equalToConstant: .newsTableViewHeight),
+            widthAnchor.constraint(equalToConstant: .deviceWidth)
         ])
     }
 }

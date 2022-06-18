@@ -1,16 +1,16 @@
 PODS:
-  - MBCircularProgressBar (0.3.5)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
-  - MBCircularProgressBar
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
-    - MBCircularProgressBar
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
-  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 432839141c6d1520f0d812cbe953f9cc000150da
+PODFILE CHECKSUM: acfeaf8517ac40ba02c2bcbbad265cfd1ef1b90e
 
 COCOAPODS: 1.11.2
