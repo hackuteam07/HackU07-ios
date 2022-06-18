@@ -16,6 +16,7 @@
 		D6392ECC2859836B00988742 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECB2859836B00988742 /* MockData.swift */; };
 		D6392ED1285983F300988742 /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECF285983F200988742 /* NewsCellView.swift */; };
 		D6392ED2285983F300988742 /* NewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ED0285983F300988742 /* NewsTableView.swift */; };
+		D68E3E98285D4B95004EDC25 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E3E97285D4B95004EDC25 /* WebViewController.swift */; };
 		D69244B9285CD3570099AEDB /* ALProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = D69244B8285CD3570099AEDB /* ALProgressView */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D6392ECB2859836B00988742 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/MockData.swift"; sourceTree = "<group>"; };
 		D6392ECF285983F200988742 /* NewsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
 		D6392ED0285983F300988742 /* NewsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableView.swift; sourceTree = "<group>"; };
+		D68E3E97285D4B95004EDC25 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				5A89F14928574E25006C50B2 /* ViewController.swift */,
 				D6392ECF285983F200988742 /* NewsCellView.swift */,
+				D68E3E97285D4B95004EDC25 /* WebViewController.swift */,
 				D6392ED0285983F300988742 /* NewsTableView.swift */,
 			);
 			path = Screen;
@@ -215,6 +218,7 @@
 				D6392ED1285983F300988742 /* NewsCellView.swift in Sources */,
 				D6392ECA2859836500988742 /* ExtensionUIColor.swift in Sources */,
 				D6392ECC2859836B00988742 /* MockData.swift in Sources */,
+				D68E3E98285D4B95004EDC25 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

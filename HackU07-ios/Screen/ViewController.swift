@@ -18,4 +18,12 @@ class ViewController: UIViewController {
 
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
+
+    override func viewWillAppear(_: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    override func viewDidDisappear(_: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 }

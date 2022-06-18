@@ -22,6 +22,14 @@ class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         data.count
     }
 
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webView = WebViewController()
+        webView.url = data[indexPath.row]["url"] as? String ?? "https://www.google.com"
+        if let superVC = parentViewController() as? ViewController {
+            superVC.navigationController?.pushViewController(webView, animated: true)
+        }
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -33,8 +41,32 @@ class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
         addConstraints([
-            heightAnchor.constraint(equalToConstant: screenHeight * 0.7),
+            heightAnchor.constraint(equalToConstant: screenHeight * 0.8),
             widthAnchor.constraint(equalToConstant: screenWidth)
         ])
+    }
+}
+
+extension UITableView {
+    func parentViewController() -> UIViewController? {
+        var parentResponder: UIResponder? = self
+        while true {
+            guard let nextResponder = parentResponder?.next else { return nil }
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
+            }
+            parentResponder = nextResponder
+        }
+    }
+
+    func parentView<T: UIView>(type _: T.Type) -> T? {
+        var parentResponder: UIResponder? = self
+        while true {
+            guard let nextResponder = parentResponder?.next else { return nil }
+            if let view = nextResponder as? T {
+                return view
+            }
+            parentResponder = nextResponder
+        }
     }
 }
