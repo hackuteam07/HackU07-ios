@@ -33,9 +33,9 @@
 		5A89F15328574E28006C50B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DB3BD4D5BD8BE67526B907 /* Pods_HackU07_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackU07_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC4D285BD030631C891106 /* Pods-HackU07-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackU07-ios.debug.xcconfig"; path = "Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		D6392EC72859835800988742 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/Colors.xcassets"; sourceTree = "<group>"; };
-		D6392EC92859836500988742 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUIColor.swift; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/ExtensionUIColor.swift"; sourceTree = "<group>"; };
-		D6392ECB2859836B00988742 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = "../../../HackU07-iosのコピー/HackU07-ios/Resources/MockData.swift"; sourceTree = "<group>"; };
+		D6392EC72859835800988742 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D6392EC92859836500988742 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		D6392ECB2859836B00988742 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D6392ECF285983F200988742 /* NewsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
 		D6392ED0285983F300988742 /* NewsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableView.swift; sourceTree = "<group>"; };
 		D661147E285D963B0028A383 /* TabManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManageViewController.swift; sourceTree = "<group>"; };

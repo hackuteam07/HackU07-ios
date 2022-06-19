@@ -34,6 +34,14 @@ class ViewController: UIViewController, IndicatorInfoProvider {
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPathForSelectedRow = newsTableView.indexPathForSelectedRow {
+            newsTableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
+
     func indicatorInfo(for _: PagerTabStripViewController) -> IndicatorInfo {
         tabInfo
     }
