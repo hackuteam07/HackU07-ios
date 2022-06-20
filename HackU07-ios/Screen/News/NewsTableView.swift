@@ -5,7 +5,13 @@
 //  Created by 有賀優太 on 2022/06/15.
 //
 
+import Combine
 import UIKit
+
+protocol NewsTableViewOutputs {
+    var requireReload: AnyPublisher<Void, Never> { get }
+    var cellContents: [NewsCellConents] { get }
+}
 
 class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     let screenWidth: CGFloat = UIScreen.main.bounds.width

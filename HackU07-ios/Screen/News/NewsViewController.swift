@@ -5,8 +5,20 @@
 //  Created by Etsushi Otani on 2022/06/13.
 //
 
+import Combine
 import UIKit
 import XLPagerTabStrip
+
+protocol NewsViewModelOutputs: NewsTableViewOutputs {}
+
+protocol NewsViewModelInputs {
+    func fetchContents()
+}
+
+protocol NewsViewModel {
+    var outputs: NewsViewModelOutputs { get }
+    var inputs: NewsViewModelInputs { get }
+}
 
 class NewsViewController: UIViewController, IndicatorInfoProvider {
     var tabInfo: IndicatorInfo = "Yahoo!ニュース"
