@@ -8,7 +8,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class ViewController: UIViewController, IndicatorInfoProvider {
+class NewsViewController: UIViewController, IndicatorInfoProvider {
     var tabInfo: IndicatorInfo = "Yahoo!ニュース"
     lazy var newsTableView = NewsTableView()
     lazy var sortIcon: UIImageView = {

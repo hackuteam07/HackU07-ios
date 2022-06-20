@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A89F14628574E25006C50B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14528574E25006C50B2 /* AppDelegate.swift */; };
 		5A89F14828574E25006C50B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14728574E25006C50B2 /* SceneDelegate.swift */; };
-		5A89F14A28574E25006C50B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14928574E25006C50B2 /* ViewController.swift */; };
+		5A89F14A28574E25006C50B2 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14928574E25006C50B2 /* NewsViewController.swift */; };
 		5A89F14F28574E28006C50B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A89F14E28574E28006C50B2 /* Assets.xcassets */; };
 		5AA2C9502860522800B9860A /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C94F2860522800B9860A /* CombineMoya */; };
 		5AA2C9522860522800B9860A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C9512860522800B9860A /* Moya */; };
@@ -31,7 +31,7 @@
 		5A89F14228574E25006C50B2 /* HackU07-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackU07-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A89F14528574E25006C50B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A89F14728574E25006C50B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A89F14928574E25006C50B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A89F14928574E25006C50B2 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5A89F14E28574E28006C50B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A89F15328574E28006C50B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DB3BD4D5BD8BE67526B907 /* Pods_HackU07_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackU07_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +106,9 @@
 		5A89F15A2857508A006C50B2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5A89F14928574E25006C50B2 /* ViewController.swift */,
-				D6392ECF285983F200988742 /* NewsCellView.swift */,
-				D68E3E97285D4B95004EDC25 /* WebViewController.swift */,
-				D6392ED0285983F300988742 /* NewsTableView.swift */,
-				D661147E285D963B0028A383 /* TabManageViewController.swift */,
+				5AA2C95A2860554000B9860A /* Web */,
+				5AA2C9592860553900B9860A /* News */,
+				5AA2C9582860553200B9860A /* Tab */,
 				D6611484285DD5A00028A383 /* Launch Screen.storyboard */,
 			);
 			path = Screen;
@@ -133,6 +131,32 @@
 				D6392EC92859836500988742 /* ExtensionUIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5AA2C9582860553200B9860A /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				D661147E285D963B0028A383 /* TabManageViewController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		5AA2C9592860553900B9860A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				D6392ED0285983F300988742 /* NewsTableView.swift */,
+				D6392ECF285983F200988742 /* NewsCellView.swift */,
+				5A89F14928574E25006C50B2 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		5AA2C95A2860554000B9860A /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				D68E3E97285D4B95004EDC25 /* WebViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		91FA507EFCED63CDD6C007D9 /* Frameworks */ = {
@@ -298,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6392ED2285983F300988742 /* NewsTableView.swift in Sources */,
-				5A89F14A28574E25006C50B2 /* ViewController.swift in Sources */,
+				5A89F14A28574E25006C50B2 /* NewsViewController.swift in Sources */,
 				5A89F14628574E25006C50B2 /* AppDelegate.swift in Sources */,
 				5A89F14828574E25006C50B2 /* SceneDelegate.swift in Sources */,
 				D6392ED1285983F300988742 /* NewsCellView.swift in Sources */,
