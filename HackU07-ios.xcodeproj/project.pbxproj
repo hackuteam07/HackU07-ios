@@ -14,6 +14,7 @@
 		5AA2C9502860522800B9860A /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C94F2860522800B9860A /* CombineMoya */; };
 		5AA2C9522860522800B9860A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C9512860522800B9860A /* Moya */; };
 		5AA2C9562860541D00B9860A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C9552860541D00B9860A /* CombineCocoa */; };
+		5AA2C95D2860590800B9860A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2C95C2860590800B9860A /* NewsViewModel.swift */; };
 		5AA2C95F28605CB200B9860A /* NewsCellContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2C95E28605CB200B9860A /* NewsCellContents.swift */; };
 		D6392EC82859835800988742 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6392EC72859835800988742 /* Colors.xcassets */; };
 		D6392ECA2859836500988742 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392EC92859836500988742 /* ExtensionUIColor.swift */; };
@@ -35,6 +36,7 @@
 		5A89F14928574E25006C50B2 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5A89F14E28574E28006C50B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A89F15328574E28006C50B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AA2C95C2860590800B9860A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		5AA2C95E28605CB200B9860A /* NewsCellContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellContents.swift; sourceTree = "<group>"; };
 		71DB3BD4D5BD8BE67526B907 /* Pods_HackU07_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackU07_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC4D285BD030631C891106 /* Pods-HackU07-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackU07-ios.debug.xcconfig"; path = "Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		5AA2C95B286058E800B9860A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5AA2C95C2860590800B9860A /* NewsViewModel.swift */,
 				5AA2C95E28605CB200B9860A /* NewsCellContents.swift */,
 			);
 			path = Models;
@@ -339,6 +342,7 @@
 				5A89F14828574E25006C50B2 /* SceneDelegate.swift in Sources */,
 				D6392ED1285983F300988742 /* NewsCellView.swift in Sources */,
 				D6392ECA2859836500988742 /* ExtensionUIColor.swift in Sources */,
+				5AA2C95D2860590800B9860A /* NewsViewModel.swift in Sources */,
 				D6392ECC2859836B00988742 /* MockData.swift in Sources */,
 				D68E3E98285D4B95004EDC25 /* WebViewController.swift in Sources */,
 				D6611483285DC2670028A383 /* ExtensionCGFloat.swift in Sources */,
