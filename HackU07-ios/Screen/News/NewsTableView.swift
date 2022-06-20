@@ -16,8 +16,6 @@ protocol NewsTableViewOutputs {
 class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     private let outputs: NewsTableViewOutputs
     private var cancellables = Set<AnyCancellable>()
-    let screenWidth: CGFloat = UIScreen.main.bounds.width
-    let screenHeight: CGFloat = UIScreen.main.bounds.height
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "news") as! NewsCellView
