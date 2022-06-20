@@ -11,6 +11,8 @@
 		5A89F14828574E25006C50B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14728574E25006C50B2 /* SceneDelegate.swift */; };
 		5A89F14A28574E25006C50B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89F14928574E25006C50B2 /* ViewController.swift */; };
 		5A89F14F28574E28006C50B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A89F14E28574E28006C50B2 /* Assets.xcassets */; };
+		5AA2C9502860522800B9860A /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C94F2860522800B9860A /* CombineMoya */; };
+		5AA2C9522860522800B9860A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5AA2C9512860522800B9860A /* Moya */; };
 		D6392EC82859835800988742 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6392EC72859835800988742 /* Colors.xcassets */; };
 		D6392ECA2859836500988742 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392EC92859836500988742 /* ExtensionUIColor.swift */; };
 		D6392ECC2859836B00988742 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECB2859836B00988742 /* MockData.swift */; };
@@ -52,6 +54,8 @@
 			files = (
 				D69244B9285CD3570099AEDB /* ALProgressView in Frameworks */,
 				DE16B6216407C2C6B4ED0D13 /* Pods_HackU07_ios.framework in Frameworks */,
+				5AA2C9522860522800B9860A /* Moya in Frameworks */,
+				5AA2C9502860522800B9860A /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +163,8 @@
 			name = "HackU07-ios";
 			packageProductDependencies = (
 				D69244B8285CD3570099AEDB /* ALProgressView */,
+				5AA2C94F2860522800B9860A /* CombineMoya */,
+				5AA2C9512860522800B9860A /* Moya */,
 			);
 			productName = "HackU07-ios";
 			productReference = 5A89F14228574E25006C50B2 /* HackU07-ios.app */;
@@ -190,6 +196,7 @@
 			mainGroup = 5A89F13928574E25006C50B2;
 			packageReferences = (
 				D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */,
+				5AA2C94E2860522800B9860A /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 5A89F14328574E25006C50B2 /* Products */;
 			projectDirPath = "";
@@ -490,6 +497,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5AA2C94E2860522800B9860A /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 		D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alxrguz/ALProgressView";
@@ -501,6 +516,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5AA2C94F2860522800B9860A /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AA2C94E2860522800B9860A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		5AA2C9512860522800B9860A /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AA2C94E2860522800B9860A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		D69244B8285CD3570099AEDB /* ALProgressView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D69244B7285CD3570099AEDB /* XCRemoteSwiftPackageReference "ALProgressView" */;
