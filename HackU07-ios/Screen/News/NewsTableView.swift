@@ -14,34 +14,34 @@ protocol NewsTableViewOutputs {
 }
 
 class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+    private let outputs: NewsTableViewOutputs
+    private var cancellables = Set<AnyCancellable>()
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     let screenHeight: CGFloat = UIScreen.main.bounds.height
-    let data = mockData().data
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "news") as! NewsCellView
-        cell.setCell(title: data[indexPath.row]["title"] as? String ?? "not found", percentage: CGFloat?(data[indexPath.row]["percentage"] as! Double) ?? 0.0)
+        let content = outputs.cellContents[indexPath.row]
+        cell.setCell(title: content.title, percentage: content.percentage)
         return cell
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        data.count
+        outputs.cellContents.count
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let webView = WebViewController()
-        webView.url = data[indexPath.row]["url"] as? String ?? "https://www.google.com"
+        let content = outputs.cellContents[indexPath.row]
+        webView.url = content.url
         if let superVC = parentViewController() as? NewsViewController {
             superVC.navigationController?.pushViewController(webView, animated: true)
         }
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
+    init(outputs: NewsTableViewOutputs) {
+        self.outputs = outputs
+        super.init(frame: .zero, style: .plain)
         delegate = self
         dataSource = self
         backgroundColor = .clear
@@ -50,6 +50,21 @@ class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
             heightAnchor.constraint(equalToConstant: .newsTableViewHeight),
             widthAnchor.constraint(equalToConstant: .deviceWidth)
         ])
+        bind()
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func bind() {
+        outputs.requireReload
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] in
+                self?.reloadData()
+            })
+            .store(in: &cancellables)
     }
 }
 

@@ -9,12 +9,11 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-    var url: String!
+    var url: URL!
 
     lazy var webView: WKWebView = {
         let view = WKWebView(frame: view.bounds)
-        let url = URL(string: self.url)
-        let request = URLRequest(url: url!)
+        let request = URLRequest(url: url)
         view.load(request)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

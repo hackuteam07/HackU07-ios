@@ -9,8 +9,6 @@ import ALProgressView
 import UIKit
 
 class NewsCellView: UITableViewCell {
-//    let deviceWidth = UIScreen.main.bounds.size.width
-
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -51,7 +49,6 @@ class NewsCellView: UITableViewCell {
         contentView.addSubview(progressCircle)
         contentView.addSubview(percentLabel)
         contentView.addSubview(buttomBorder)
-//        let paddingSize = deviceWidth * 0.05
         contentView.autoresizingMask = .flexibleHeight
         let contentHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: .deviceWidth * 0.25)
         contentHeightConstraint.priority = UILayoutPriority(rawValue: 750)
@@ -85,9 +82,9 @@ class NewsCellView: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setCell(title: String, percentage: CGFloat) {
+    func setCell(title: String, percentage: Float) {
         titleLabel.text = title
-        progressCircle.setProgress(Float(percentage), animated: true)
+        progressCircle.setProgress(percentage, animated: true)
         percentLabel.text = String(percentage * 100) + "%"
     }
 }
