@@ -87,6 +87,7 @@
 			children = (
 				5A89F1592857507A006C50B2 /* App */,
 				5A89F15A2857508A006C50B2 /* Screen */,
+				5AA2C957286054CD00B9860A /* Extensions */,
 				5A89F15B285750B9006C50B2 /* Resources */,
 				5A89F15328574E28006C50B2 /* Info.plist */,
 			);
@@ -120,11 +121,18 @@
 			children = (
 				D6392EC72859835800988742 /* Colors.xcassets */,
 				5A89F14E28574E28006C50B2 /* Assets.xcassets */,
-				D6392EC92859836500988742 /* ExtensionUIColor.swift */,
-				D6611482285DC2670028A383 /* ExtensionCGFloat.swift */,
 				D6392ECB2859836B00988742 /* MockData.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5AA2C957286054CD00B9860A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6611482285DC2670028A383 /* ExtensionCGFloat.swift */,
+				D6392EC92859836500988742 /* ExtensionUIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		91FA507EFCED63CDD6C007D9 /* Frameworks */ = {
