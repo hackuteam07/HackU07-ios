@@ -90,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5A89F1592857507A006C50B2 /* App */,
+				5AAF8FCB2860C67B00773914 /* Common */,
 				5A89F15A2857508A006C50B2 /* Screen */,
 				5AA2C957286054CD00B9860A /* Extensions */,
 				5A89F15B285750B9006C50B2 /* Resources */,
@@ -123,7 +124,6 @@
 			children = (
 				D6392EC72859835800988742 /* Colors.xcassets */,
 				5A89F14E28574E28006C50B2 /* Assets.xcassets */,
-				D6392ECB2859836B00988742 /* MockData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -171,6 +171,14 @@
 				5AA2C95E28605CB200B9860A /* NewsCellContents.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5AAF8FCB2860C67B00773914 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D6392ECB2859836B00988742 /* MockData.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		91FA507EFCED63CDD6C007D9 /* Frameworks */ = {
