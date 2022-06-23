@@ -15,6 +15,7 @@ protocol NewsViewModelInputs {
     func fetchContents()
 }
 
+@MainActor
 protocol NewsViewModel {
     var outputs: NewsViewModelOutputs { get }
     var inputs: NewsViewModelInputs { get }
@@ -30,7 +31,7 @@ class NewsViewController: UIViewController, IndicatorInfoProvider {
         return view
     }()
 
-    init(viewModel: NewsViewModel = NewsViewModelImpl()) {
+    init(viewModel: NewsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
