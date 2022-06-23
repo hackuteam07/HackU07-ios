@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+final class FetchArticleUseCaseImpl: FetchArticleUseCase {
+    private let provider: OmeletteRiceAPIProvider
+
+    init(provider: OmeletteRiceAPIProvider = OmeletteRiceAPIProviderImpl()) {
+        self.provider = provider
+    }
+
+    func fetchArticle() async throws -> [GetArticleResponse] {
+        try await provider.exec(request: GetArticleReauest())
+    }
+}

@@ -8,6 +8,10 @@
 import Combine
 import Foundation
 
+protocol FetchArticleUseCase {
+    func fetchArticle() async throws -> [GetArticleResponse]
+}
+
 final class NewsViewModelImpl: NewsViewModel {
     var outputs: NewsViewModelOutputs { self }
     var inputs: NewsViewModelInputs { self }
