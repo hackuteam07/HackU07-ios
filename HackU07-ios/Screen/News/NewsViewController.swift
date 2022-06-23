@@ -9,7 +9,9 @@ import Combine
 import UIKit
 import XLPagerTabStrip
 
-protocol NewsViewModelOutputs: NewsTableViewOutputs {}
+protocol NewsViewModelOutputs: NewsTableViewOutputs {
+    var isLoading: AnyPublisher<Bool, Never> { get }
+}
 
 protocol NewsViewModelInputs {
     func fetchContents()
@@ -23,12 +25,21 @@ protocol NewsViewModel {
 
 class NewsViewController: UIViewController, IndicatorInfoProvider {
     private let viewModel: NewsViewModel
+    private var cancellables = Set<AnyCancellable>()
     var tabInfo: IndicatorInfo = "Yahoo!ニュース"
     lazy var newsTableView = NewsTableView(outputs: viewModel.outputs)
     lazy var sortIcon: UIImageView = {
         let view = UIImageView(image: UIImage(named: "SortIcon"))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+
+    lazy var loadingIndicatorView: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView()
+        indicatorView.style = .large
+        indicatorView.color = .white
+        indicatorView.center = view.center
+        return indicatorView
     }()
 
     init(viewModel: NewsViewModel) {
@@ -45,6 +56,7 @@ class NewsViewController: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        bind()
         viewModel.inputs.fetchContents()
     }
 
@@ -60,6 +72,8 @@ class NewsViewController: UIViewController, IndicatorInfoProvider {
         view.addSubview(sortIcon)
         view.backgroundColor = .baseBlack
         view.addSubview(newsTableView)
+        view.addSubview(loadingIndicatorView)
+        view.bringSubviewToFront(loadingIndicatorView)
         newsTableView.register(NewsCellView.self, forCellReuseIdentifier: "news")
 
         view.addConstraints([
@@ -68,6 +82,14 @@ class NewsViewController: UIViewController, IndicatorInfoProvider {
             sortIcon.bottomAnchor.constraint(equalTo: newsTableView.topAnchor)
         ])
         newsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+
+    private func bind() {
+        viewModel.outputs.isLoading
+            .sink(receiveValue: { [weak self] isLoading in
+                self?.loadingIndicatorView.updateStatus(isLoading)
+            })
+            .store(in: &cancellables)
     }
 
     func indicatorInfo(for _: PagerTabStripViewController) -> IndicatorInfo {
