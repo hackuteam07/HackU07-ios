@@ -16,10 +16,14 @@ final class NewsViewModelImpl: NewsViewModel {
     var outputs: NewsViewModelOutputs { self }
     var inputs: NewsViewModelInputs { self }
 
+    private let fetchArticleUseCase: FetchArticleUseCase
+
     private let requireReloadPublisher = PassthroughSubject<Void, Never>()
     private var newsCellContents: [NewsCellConents] = []
 
-    init() {}
+    init(fetchArticleUseCase: FetchArticleUseCase = FetchArticleUseCaseImpl()) {
+        self.fetchArticleUseCase = fetchArticleUseCase
+    }
 }
 
 extension NewsViewModelImpl: NewsViewModelOutputs {
@@ -34,7 +38,20 @@ extension NewsViewModelImpl: NewsViewModelOutputs {
 
 extension NewsViewModelImpl: NewsViewModelInputs {
     func fetchContents() {
-        newsCellContents = NewsCellConents.mockDatas
-        requireReloadPublisher.send()
+        Task.detached { [weak self] in
+            guard let strongSelf = self else { return }
+            do {
+                let articles = try await strongSelf.fetchArticleUseCase.fetchArticle()
+                await MainActor.run {
+                    strongSelf.newsCellContents = articles.map {
+                        NewsCellConents(title: $0.title, percentage: Float($0.score).rounded4, url: URL(string: $0.url))
+                    }
+                    strongSelf.requireReloadPublisher.send()
+                }
+            } catch {
+                // エラー処理
+                print(error.localizedDescription)
+            }
+        }
     }
 }

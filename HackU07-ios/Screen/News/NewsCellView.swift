@@ -85,6 +85,6 @@ class NewsCellView: UITableViewCell {
     func setCell(title: String, percentage: Float) {
         titleLabel.text = title
         progressCircle.setProgress(percentage, animated: true)
-        percentLabel.text = String(percentage * 100) + "%"
+        percentLabel.text = String(format: "%.1f", percentage * 100) + "%"
     }
 }

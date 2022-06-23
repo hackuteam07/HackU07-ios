@@ -29,7 +29,8 @@ class NewsTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let webView = WebViewController(url: outputs.cellContents[indexPath.row].url)
+        guard let url = outputs.cellContents[indexPath.row].url else { return }
+        let webView = WebViewController(url: url)
         if let superVC = parentViewController() as? NewsViewController {
             superVC.navigationController?.pushViewController(webView, animated: true)
         }
