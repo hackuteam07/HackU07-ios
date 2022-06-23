@@ -11,6 +11,7 @@ import XLPagerTabStrip
 
 protocol NewsViewModelOutputs: NewsTableViewOutputs {
     var isLoading: AnyPublisher<Bool, Never> { get }
+    var showAlert: AnyPublisher<String, Never> { get }
 }
 
 protocol NewsViewModelInputs {
@@ -88,6 +89,12 @@ class NewsViewController: UIViewController, IndicatorInfoProvider {
         viewModel.outputs.isLoading
             .sink(receiveValue: { [weak self] isLoading in
                 self?.loadingIndicatorView.updateStatus(isLoading)
+            })
+            .store(in: &cancellables)
+        viewModel.outputs.showAlert
+            .sink(receiveValue: { [weak self] message in
+                let alert = UIAlertController.errorAlert(message: message)
+                self?.present(alert, animated: true)
             })
             .store(in: &cancellables)
     }

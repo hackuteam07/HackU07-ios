@@ -20,6 +20,7 @@ final class NewsViewModelImpl: NewsViewModel {
 
     private let requireReloadPublisher = PassthroughSubject<Void, Never>()
     private let isLoadingPublisher = PassthroughSubject<Bool, Never>()
+    private let showAlertPublisher = PassthroughSubject<String, Never>()
     private var newsCellContents: [NewsCellConents] = []
 
     init(fetchArticleUseCase: FetchArticleUseCase = FetchArticleUseCaseImpl()) {
@@ -39,6 +40,10 @@ extension NewsViewModelImpl: NewsViewModelOutputs {
     var isLoading: AnyPublisher<Bool, Never> {
         isLoadingPublisher.eraseToAnyPublisher()
     }
+
+    var showAlert: AnyPublisher<String, Never> {
+        showAlertPublisher.eraseToAnyPublisher()
+    }
 }
 
 extension NewsViewModelImpl: NewsViewModelInputs {
@@ -56,9 +61,10 @@ extension NewsViewModelImpl: NewsViewModelInputs {
                     strongSelf.isLoadingPublisher.send(false)
                 }
             } catch {
-                // エラー処理
-                print(error.localizedDescription)
-                strongSelf.isLoadingPublisher.send(false)
+                await MainActor.run {
+                    strongSelf.showAlertPublisher.send(error.localizedDescription)
+                    strongSelf.isLoadingPublisher.send(false)
+                }
             }
         }
     }

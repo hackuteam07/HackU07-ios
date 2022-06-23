@@ -24,6 +24,7 @@
 		5AFA006F2864B8B100278DC9 /* FetchArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA006E2864B8B100278DC9 /* FetchArticleUseCase.swift */; };
 		5AFA00712864BFD600278DC9 /* ExtensionFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA00702864BFD600278DC9 /* ExtensionFloat.swift */; };
 		5AFA00732864D27F00278DC9 /* ExtensionUIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA00722864D27F00278DC9 /* ExtensionUIActivityIndicatorView.swift */; };
+		5AFA00752864D40500278DC9 /* ExtensionUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA00742864D40500278DC9 /* ExtensionUIAlertController.swift */; };
 		D6392EC82859835800988742 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6392EC72859835800988742 /* Colors.xcassets */; };
 		D6392ECA2859836500988742 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392EC92859836500988742 /* ExtensionUIColor.swift */; };
 		D6392ECC2859836B00988742 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6392ECB2859836B00988742 /* MockData.swift */; };
@@ -54,6 +55,7 @@
 		5AFA006E2864B8B100278DC9 /* FetchArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArticleUseCase.swift; sourceTree = "<group>"; };
 		5AFA00702864BFD600278DC9 /* ExtensionFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloat.swift; sourceTree = "<group>"; };
 		5AFA00722864D27F00278DC9 /* ExtensionUIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		5AFA00742864D40500278DC9 /* ExtensionUIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIAlertController.swift; sourceTree = "<group>"; };
 		71DB3BD4D5BD8BE67526B907 /* Pods_HackU07_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackU07_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC4D285BD030631C891106 /* Pods-HackU07-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackU07-ios.debug.xcconfig"; path = "Target Support Files/Pods-HackU07-ios/Pods-HackU07-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D6392EC72859835800988742 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				5AAF8FCC2860C6B800773914 /* ExtensionUIView.swift */,
 				5AFA00702864BFD600278DC9 /* ExtensionFloat.swift */,
 				5AFA00722864D27F00278DC9 /* ExtensionUIActivityIndicatorView.swift */,
+				5AFA00742864D40500278DC9 /* ExtensionUIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				5AA2C95F28605CB200B9860A /* NewsCellContents.swift in Sources */,
 				5AAF8FCD2860C6B800773914 /* ExtensionUIView.swift in Sources */,
 				5AA6997C2864B269000F35C1 /* APIProvider.swift in Sources */,
+				5AFA00752864D40500278DC9 /* ExtensionUIAlertController.swift in Sources */,
 				D6392ED2285983F300988742 /* NewsTableView.swift in Sources */,
 				5AFA006F2864B8B100278DC9 /* FetchArticleUseCase.swift in Sources */,
 				5A89F14A28574E25006C50B2 /* NewsViewController.swift in Sources */,
