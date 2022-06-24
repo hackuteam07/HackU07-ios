@@ -8,10 +8,10 @@
 import Foundation
 import Moya
 
-struct GetArticleReauest {}
+struct GetNewsReauest {}
 
-extension GetArticleReauest: OmeletteRiceAPI {
-    typealias Response = [GetArticleResponse]
+extension GetNewsReauest: OmeletteRiceAPI {
+    typealias Response = [News]
 
     var path: String {
         "/"

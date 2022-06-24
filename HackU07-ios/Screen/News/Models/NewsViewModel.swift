@@ -8,23 +8,23 @@
 import Combine
 import Foundation
 
-protocol FetchArticleUseCase {
-    func fetchArticle() async throws -> [GetArticleResponse]
+protocol FetchNewsUseCase {
+    func fetchNews() async throws -> [News]
 }
 
 final class NewsViewModelImpl: NewsViewModel {
     var outputs: NewsViewModelOutputs { self }
     var inputs: NewsViewModelInputs { self }
 
-    private let fetchArticleUseCase: FetchArticleUseCase
+    private let fetchNewsUseCase: FetchNewsUseCase
 
     private let requireReloadPublisher = PassthroughSubject<Void, Never>()
     private let isLoadingPublisher = PassthroughSubject<Bool, Never>()
     private let showAlertPublisher = PassthroughSubject<String, Never>()
     private var newsCellContents: [NewsCellConents] = []
 
-    init(fetchArticleUseCase: FetchArticleUseCase = FetchArticleUseCaseImpl()) {
-        self.fetchArticleUseCase = fetchArticleUseCase
+    init(fetchNewsUseCase: FetchNewsUseCase = FetchNewsUseCaseImpl()) {
+        self.fetchNewsUseCase = fetchNewsUseCase
     }
 }
 
@@ -52,9 +52,9 @@ extension NewsViewModelImpl: NewsViewModelInputs {
         Task.detached { [weak self] in
             guard let strongSelf = self else { return }
             do {
-                let articles = try await strongSelf.fetchArticleUseCase.fetchArticle()
+                let news = try await strongSelf.fetchNewsUseCase.fetchNews()
                 await MainActor.run {
-                    strongSelf.newsCellContents = articles.map {
+                    strongSelf.newsCellContents = news.map {
                         NewsCellConents(title: $0.title, percentage: Float($0.score).rounded4, url: URL(string: $0.url))
                     }
                     strongSelf.requireReloadPublisher.send()

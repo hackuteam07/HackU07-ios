@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetArticleResponse: Decodable {
+struct News: Decodable {
     let title: String
     let url: String
     let score: Double
