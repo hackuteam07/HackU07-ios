@@ -9,7 +9,7 @@ import UIKit
 import XLPagerTabStrip
 
 class TabManageViewController: ButtonBarPagerTabStripViewController {
-    lazy var yahooVC = ViewController()
+    lazy var yahooVC = NewsViewController(viewModel: NewsViewModelImpl())
 
     lazy var buttonBar: ButtonBarView = {
         let view = buttonBarView
