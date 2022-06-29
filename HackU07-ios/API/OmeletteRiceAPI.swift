@@ -15,7 +15,7 @@ protocol OmeletteRiceAPI: TargetType {
 
 extension OmeletteRiceAPI {
     var baseURL: URL {
-        URL(string: "https://hackuteam07-api.herokuapp.com")!
+        URL(string: "https://hacku7-server-web-zszjj7cu4q-an.a.run.app")!
     }
 
     var headers: [String: String]? {
